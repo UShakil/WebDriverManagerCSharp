@@ -31,15 +31,13 @@ namespace Tests
                     _driver = new ChromeDriver();
                     break;
             }
-            _driver.Url = "https://github.com/rosolko/WebDriverManager.Net";
-            
+            _driver.Url = "https://github.com/rosolko/WebDriverManager.Net";            
         }
 
         [Test]
         public void Test1()
         {
-            string txtAbout = _driver.FindElement(By.CssSelector("span[itemprop = 'about']")).Text;
-            Assert.AreEqual(txtAbout, "Automatic Selenium Webdriver binaries management for .Net");
+            Assert.IsTrue(_driver.FindElement(By.CssSelector("span[itemprop = 'about']")).Displayed);
         }
 
         [TearDown]
