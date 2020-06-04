@@ -19,7 +19,7 @@ namespace Tests
             switch (browser)
             {
                 case "chrome":
-                    new DriverManager().SetUpDriver(new ChromeConfig(), "Latest");
+                    new DriverManager().SetUpDriver(new ChromeConfig());
                     _driver = new ChromeDriver();
                     break;
                 case "firefox":
